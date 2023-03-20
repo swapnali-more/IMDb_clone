@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+body {
+    background-color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #fff;
+}
+
+.header {
+    padding: 10px 0;
+}
+.header-logo {
+    display: block;
+    width: 80px;
+}
+.header-search {
+    position: relative;
+}
+
+.header-search .icon {
+    position: absolute;
+    display: block;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000;
+}
+
+.movies-card {
+    background: #1a1a1a;
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px #383838;
+}
+
+.movies-card::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(26,26,26,0.4990371148459384) 0%, rgba(26,26,26,0.9023984593837535) 100%);
+    width: 100%;
+    height: 100%;
+}
+
+.movie-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.movie-content {
+    padding: 10px;
+    z-index: 9;
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.movie-content a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.wishlist {
+    position: absolute;
+    display: block;
+    top: 15px;
+    right: 15px;
+    padding: 0;
+    border: 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+.wishlist:hover {
+    color:#a10312;
+}
+
+.loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    display: block;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .loader-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+.detail-img img {
+    max-width: 260px;
+    border: 3px solid #c19f24;
+}
+.list {
+    display: flex;
+    align-items: center;
+}
+
+.list li:nth-child(2) {
+    background-color: #c19f24;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.genre {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #1a1a1a;
+    border-radius: 5px;
+}
+
+.language, .awards i {
+    color: #c19f24;
+}
+
+.awards i {
+    font-size: 15px;
+    margin-right: 5px;
+}
